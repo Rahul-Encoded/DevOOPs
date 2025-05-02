@@ -1,0 +1,49 @@
+name: Build Console App
+
+env:
+  DOTNET_VERSION: '8'                 # set this to the .NET Core version to use
+
+on:
+  push:
+    branches: [ "main", "akshay-online-patch-ymlfix" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Set up dependency caching for faster builds
+        uses: actions/cache@v3
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
+      - name: Change to project directory
+        run: cd src
+
+      - name: Build with dotnet
+        run: dotnet build src/ADOGenerator.sln -c Release
+
+      - name: Publish with dotnet
+        run: dotnet publish src/ADOGenerator.sln -c Release -o "${{env.DOTNET_ROOT}}/drop"
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          name: .net-app
+          path: "${{env.DOTNET_ROOT}}/drop"

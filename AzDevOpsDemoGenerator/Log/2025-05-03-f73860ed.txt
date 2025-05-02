@@ -1,0 +1,5 @@
+
+Enter the option number from the list of options above:
+
+Choose authentication method: 1. Device Login using AD auth 2. Personal Access Token (PAT)
+Exiting the application.

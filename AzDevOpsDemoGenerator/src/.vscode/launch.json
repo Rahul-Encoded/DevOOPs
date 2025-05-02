@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run ADOGenerator",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/ADOGenerator/bin/Debug/net8.0/ADOGenerator.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/ADOGenerator",
+      "stopAtEntry": false,
+      "console": "integratedTerminal"
+    }
+  ]
+}
