@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 # Azure DevOps Demo Generator
-
+### To Directly start working you can go to docs -> Images and read RunApplication.md
 
 ## About
 
