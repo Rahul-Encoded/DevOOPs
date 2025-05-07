@@ -2,6 +2,8 @@
 # Azure DevOps Demo Generator
 ### To Directly start working you can go to docs -> Images and read RunApplication.md
 
+This will automate the creation of a new Azure DevOps project within your account that is prepopulated with content (work items, repos, etc.) required for the lab. THen you can follow the steps mentioned in this repo.
+
 ## About
 
 The Azure DevOps Demo Generator can create projects in your Azure DevOps organization, prepopulated with template-based content including source code, work items, iterations, service endpoints, build and release definitions, and more!
