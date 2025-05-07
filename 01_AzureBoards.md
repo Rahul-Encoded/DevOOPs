@@ -146,6 +146,8 @@ This creates:
 
 ### **Visual Representation of Scrum Workflow**
 
+![image](Assets\SCRUM.png)
+
 Here’s a simplified diagram illustrating the flow of work in Scrum:
 
 ```

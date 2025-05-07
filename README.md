@@ -1,12 +1,10 @@
-Sure! Here's a more Gen Z-style, fun, and engaging README for your **DevOOPs** repo, while keeping it informative:
-
----
-
 # 💥 DevOOPs 😵‍💫
 
 > *Oops... I did DevOps!*
 
 Yo! This repo is basically my chaotic-but-cute digital diary of learning **DevOps** – the real-deal backend magic that makes the internet not explode 💻🔥.
+
+### Visit AzDevOpsDemoGenerator first, You will be prompeted with the next steps. After completing them follow the Repo serially.
 
 ### 📚 Where I learnt all this wizardry:
 
